@@ -13,9 +13,6 @@ void loop()
   long a = analogRead(analogPin);
   //the calculating formula of temperature
   float tempC = beta /(log((1025.0 * 10 / a - 10) / 10) + beta / 298.0) - 273.0;
-  Serial.print("Temp:  ");
-  Serial.print(tempC);
-  Serial.print("  C");
-  Serial.println();
-  delay(200); //wait for 100 milliseconds
+  Serial.println(tempC);
+  delay(1000); //wait for 100 milliseconds
 }
